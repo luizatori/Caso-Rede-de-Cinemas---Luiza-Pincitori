@@ -1,18 +1,13 @@
-public class SessaoController {
+class SessaoController:
 
-    private SessaoService service;
+    def __init__(self, service):
+        self.service = service
 
-    public SessaoController(SessaoService service) {
-        this.service = service;
-    }
+    def cadastrar_sessao(self, sessao):
 
-    public void cadastrarSessao(Sessao sessao) {
+        try:
+            self.service.cadastrar(sessao)
+            print("Sessão cadastrada com sucesso")
 
-        try {
-            service.cadastrar(sessao);
-            System.out.println("Sessão cadastrada com sucesso");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-}
+        except Exception as e:
+            print(f"Erro: {e}")
