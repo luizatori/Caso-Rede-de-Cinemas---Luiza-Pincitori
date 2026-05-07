@@ -1,17 +1,11 @@
-public class SessaoService {
+class SessaoService:
 
-    private SessaoRepository repository;
+    def __init__(self, repository):
+        self.repository = repository
 
-    public SessaoService(SessaoRepository repository) {
-        this.repository = repository;
-    }
+    def cadastrar(self, sessao):
 
-    public void cadastrar(Sessao sessao) throws Exception {
+        if not sessao.horario_inicio:
+            raise Exception("Horário inválido")
 
-        if(sessao.getHorarioInicio().isEmpty()) {
-            throw new Exception("Horário inválido");
-        }
-
-        repository.salvar(sessao);
-    }
-}
+        self.repository.salvar(sessao)
