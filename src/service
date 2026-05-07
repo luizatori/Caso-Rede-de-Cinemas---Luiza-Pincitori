@@ -1,0 +1,17 @@
+public class SessaoService {
+
+    private SessaoRepository repository;
+
+    public SessaoService(SessaoRepository repository) {
+        this.repository = repository;
+    }
+
+    public void cadastrar(Sessao sessao) throws Exception {
+
+        if(sessao.getHorarioInicio().isEmpty()) {
+            throw new Exception("Horário inválido");
+        }
+
+        repository.salvar(sessao);
+    }
+}
