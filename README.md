@@ -32,16 +32,40 @@ MVC + Service + Repository
 
 - Diagramas de Sequência.
 
-## Como Executar o Projeto
+## Como Testar a Aplicação no VS Code
+### 1. Pré-requisitos
 
-### 1. Clone o repositório
+Antes de executar o projeto, é necessário possuir:
+
+- Python 3
+- VS Code instalado.
+
+### Para verificar o Python:
+
+python --version
+
+### 2. No terminal (cmd):
+
 git clone https://github.com/luizatori/Caso-Rede-de-Cinemas---Luiza-Pincitori.git
 
-### 2. Acesse a pasta do projeto
-cd Caso-Rede-de-Cinemas---Luiza-Pincitori
+### 3. Abrir o Projeto no VS Code
 
-### 3. Execute o banco de dados
-python database/database.py
+- Abra o VS Code;
+- Clique em:
+File > Open Folder
+- Selecione a pasta:
+Caso-Rede-de-Cinemas---Luiza-Pincitori
 
-### 4. Execute o sistema
-python main.py
+### 4. No terminal do VS Code:
+
+- Execute:
+python src/database/database.py
+
+- Esse comando irá:
+criar o arquivo cinema.db;
+criar a tabela sessao.
+
+### 5. Executar a Aplicação
+
+No terminal:
+python src/main.py
