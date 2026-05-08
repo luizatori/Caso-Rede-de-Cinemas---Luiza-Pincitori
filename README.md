@@ -59,13 +59,15 @@ Caso-Rede-de-Cinemas---Luiza-Pincitori
 ### 4. No terminal do VS Code:
 
 - Execute:
+  
 python src/database/database.py
 
-- Esse comando irá:
-criar o arquivo cinema.db;
-criar a tabela sessao.
+Esse comando irá:
+- criar o arquivo cinema.db;
+- criar a tabela sessao.
 
 ### 5. Executar a Aplicação
 
-No terminal:
+- No terminal:
+  
 python src/main.py
